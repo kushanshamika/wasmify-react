@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# WASMIFY REACT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Placeholder for Logo](https://i.ibb.co/bgK0FmQ/wasify-react.png)
 
-## Available Scripts
+A React-based framework that allows users to generate applications pre-configured with WebAssembly (WASM) support using Go.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Links
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **[User Guide](#)**: Detailed documentation on how to use WASMIFY REACT.
+- **[Report an Issue](https://github.com/kushanshamika/wasmify-react/issues)**: Found a bug? Help us improve by reporting it.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Quick Overview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To create a new project with **WASMIFY REACT**, run the following commands:
 
-### `npm run build`
+```bash
+npx create-wasmify-react my-app
+cd my-app
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This will create a new React project with WebAssembly (WASM) support using Go, ready to use. You can then start building your app immediately!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Pre-requisites
 
-### `npm run eject`
+Make sure the following are installed and properly set up:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Go LTS**: Ensure that Go is installed, and the paths are correctly set.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Verify Go Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To verify that Go is installed, run the following command in your terminal:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+go version
+```
 
-## Learn More
+You should see the Go version displayed.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Build WASM file
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+After setting up the project, you can build the WebAssembly file by running the following command:
 
-### Code Splitting
+```bash
+npm run wasm-build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This will generate the necessary `.wasm` files in the appropriate directory.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Framework Structure
 
-### Making a Progressive Web App
+When you create a new project using **WASMIFY REACT**, you will get the following directory structure:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+my-app/
+├── node_modules/
+├── public/
+│   ├── wasm/
+│   │   └── build
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+├── src/
+│   ├── hooks/
+│   │   └── useWASM.js
+│   ├── wasm/
+│   │   └── go/
+│   ├── App.js
+│   ├── index.js
+│   ├── index.css
+│   ├── logo.svg
+│   └── wasm-setup.js
+├── .gitignore
+├── package.json
+├── README.md
+└── yarn.lock
+```
 
-### Advanced Configuration
+- **`public/`**: Contains the static assets like the HTML file and favicon.
+- **`src/`**: Main directory for React components and WebAssembly modules.
+  - **`wasm/go`**: Directory to store the `.go` files.
+  - **`hooks/useWASM.js`**: React hook that imports the WebAssembly modules.
+- **`.gitignore`**: Files and folders ignored by Git.
+- **`package.json`**: Contains project dependencies and scripts.
+  
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License
 
-### Deployment
+This project is licensed under the MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy building your next WASM-powered React application with **WASMIFY REACT**!
